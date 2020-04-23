@@ -2,8 +2,11 @@ package com.sort;
 
 import com.sortutils.GenerateRandomArray;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 public class MyMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         int[] nums = GenerateRandomArray.getArray(10, 100);
         for (int i = 0; i < 10; i++) {
             System.out.print(nums[i] + " ");
@@ -24,6 +27,9 @@ public class MyMain {
 //            }
             System.out.print(nums[i] + " ");
         }
+        System.out.println("_____________");
+
+
 
     }
 
