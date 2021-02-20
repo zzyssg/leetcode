@@ -16,7 +16,9 @@ public class Merge extends Base{
         int mid = (high - low) / 2 + low;
         sort(a,low,mid);
         sort(a,mid + 1,high);
+        System.out.println(low + " " + mid + " " + high);
         merge(a,low,mid,high);
+        System.out.println();
 
     }
 
@@ -44,7 +46,7 @@ public class Merge extends Base{
     }
 
     public static void main(String[] args) {
-        Integer[] ins = {6, 4, 3, 2, 1,34,56,2,45,57,12};
+        Integer[] ins = {6, 4, 3, 2, 1,34,56,2,45,57,121,2,3,4,5,6,7,8,9};
         Merge.sort(ins);
         Merge.show(ins);
     }

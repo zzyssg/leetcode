@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5b1bcf4-5f7f-4036-85bc-b90c89d5cb3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/com/sort/algarthm/Merge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/com/sort/algarthm/Merge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sort/algarthm/Merge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sort/algarthm/Merge.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +51,7 @@
       <recent name="C:\product\algrathrm\leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Merge">
-    <configuration name="InsectionWithSentenel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.InsectionWithSentenel" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sort.algarthm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MergeOfNature">
     <configuration name="InsectionWithoutEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.InsectionWithoutEx" />
       <module name="leetcode" />
@@ -89,8 +78,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortNum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.SortNum" />
+    <configuration name="MergeDownToTop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.MergeDownToTop" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -102,8 +91,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.Test" />
+    <configuration name="MergeOfNature" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.MergeOfNature" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -111,17 +100,41 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeWithoutAux" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.MergeWithoutAux" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sort.algarthm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeOfNature" />
+        <item itemvalue="Application.MergeWithoutAux" />
+        <item itemvalue="Application.MergeDownToTop" />
         <item itemvalue="Application.Merge" />
         <item itemvalue="Application.InsectionWithoutEx" />
-        <item itemvalue="Application.InsectionWithSentenel" />
-        <item itemvalue="Application.SortNum" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +148,7 @@
       <updated>1613614414935</updated>
       <workItem from="1613614418267" duration="11835000" />
       <workItem from="1613695272290" duration="16551000" />
-      <workItem from="1613781706824" duration="591000" />
+      <workItem from="1613781706824" duration="16056000" />
     </task>
     <servers />
   </component>
