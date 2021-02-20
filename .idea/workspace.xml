@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5b1bcf4-5f7f-4036-85bc-b90c89d5cb3e" name="Default Changelist" comment="" />
+    <list default="true" id="f5b1bcf4-5f7f-4036-85bc-b90c89d5cb3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +43,11 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\product\algrathrm\leetcode" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Merge">
     <configuration name="InsectionWithSentenel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -128,7 +135,7 @@
       <updated>1613614414935</updated>
       <workItem from="1613614418267" duration="11835000" />
       <workItem from="1613695272290" duration="16551000" />
-      <workItem from="1613781706824" duration="298000" />
+      <workItem from="1613781706824" duration="591000" />
     </task>
     <servers />
   </component>
