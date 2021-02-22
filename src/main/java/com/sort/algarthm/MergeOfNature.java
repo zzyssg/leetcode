@@ -1,7 +1,12 @@
 package com.sort.algarthm;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class MergeOfNature extends Base {
     private static Comparable[] aux;
+
     //找到第一个比前一个数字小的位置j ---- i = j - 1
     //再找到第一个比前一个数字小的位置k ---- j = k - 1
     //merge(a,0,i,j)
@@ -9,20 +14,20 @@ public class MergeOfNature extends Base {
     //继续找到j
     //merge(a,0,i,j)
     //直到i = right
-    public static void sort(Comparable[] a){
+    public static void sort(Comparable[] a) {
         int N = a.length;
         aux = new Comparable[N];
         int i = 0;
-        while (i < N){
+        int j = 1;
+        while (j < N - 1) {
             //定位i
-            int j = i + 1;
-            while (j < N && less(a[j], a[j + 1])) {
+            while (j < N && !less(a[j], a[j - 1])) {
                 j++;
             }
             i = j - 1;
             //定位j
             int k = j + 1;
-            while (k < N && less(a[k], a[k + 1])) {
+            while (k < N && !less(a[k], a[k - 1])) {
                 k++;
             }
             j = k - 1;
@@ -53,9 +58,29 @@ public class MergeOfNature extends Base {
     }
 
     public static void main(String[] args) {
-        Integer[] ins = {3, 4, 56, 7, 8, 9, 2, 1};
-        MergeOfNature.sort(ins);
-        MergeOfNature.show(ins);
+//        Integer[] inss = {84, 81, 16, 76, 5, 11, 46, 84, 75, 91};
+//        MergeOfNature.sort(inss);
+//        MergeOfNature.show(inss);
+
+        int time = 50;
+        int len = 10;
+        Integer[] ins;
+        for (int i = 0; i < time; i++) {
+            List<Integer> list = new ArrayList<>();
+            Random random = new Random();
+            for (int j = 0; j < len; j++) {
+                int num = random.nextInt(100) + 1;
+                list.add(num);
+            }
+            ins = list.toArray(new Integer[]{});
+            MergeOfNature.show(ins);
+            MergeOfNature.sort(ins);
+            if (!MergeOfNature.isSorted(ins)) {
+                System.out.println(MergeOfNature.isSorted(ins));
+            }
+            MergeOfNature.show(ins);
+            System.out.println("--------------------");
+        }
     }
 
 }
