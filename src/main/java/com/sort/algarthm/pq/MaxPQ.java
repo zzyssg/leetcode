@@ -1,94 +1,85 @@
 package com.sort.algarthm.pq;
 
+import java.util.Scanner;
+
 public class MaxPQ<Key extends Comparable> {
     private Key[] pq;
-    private int N = 0;
+    private int N;
 
-    public MaxPQ(int size) {
-        pq = (Key[]) new Comparable[size + 1];
+    public MaxPQ(int n) {
+        pq = (Key[]) new Comparable[n + 1];
     }
 
-    public int getSize() {
-        return N;
-    }
-
-    //insert
+    //新增数据
     public void insert(Key key) {
         pq[++N] = key;
         swim(N);
-        printPQ();
-        if (N >= 0.75 * pq.length) {
-            resizePQ(pq.length * 2);
-
-        }
-
     }
 
-    //扩容至2倍
-    private void resizePQ(int newSize) {
-        Key[] newPQ = (Key[]) new Comparable[newSize];
-        for (int i = 0; i < pq.length; i++) {
-            newPQ[i] = pq[i];
-        }
-        pq = newPQ;
-    }
-
-    private void printPQ() {
-        for (int i = 1; i <= N; i++) {
-            System.out.print(pq[i] + " ");
-        }
-        System.out.println();
-    }
-
-    //底层元素上游
+    //上游
     private void swim(int k) {
-        //比父元素大
-        while (k > 1 && less(k / 2, k)) {
-            ex(k / 2, k);
+        while (k > 1 && less(pq, k / 2, k)) {
+            ex(pq, k / 2, k);
             k = k / 2;
         }
+
     }
 
-    private void ex(int p, int k) {
-        Key tem = pq[p];
-        pq[p] = pq[k];
+    private void ex(Key[] pq, int s, int k) {
+        Key tem = pq[s];
+        pq[s] = pq[k];
         pq[k] = tem;
     }
 
-    private boolean less(int p, int k) {
-        return pq[p].compareTo(pq[k]) < 0;
+    private boolean less(Key[] pq, int s, int k) {
+        return pq[s].compareTo(pq[k]) < 0;
     }
 
-    //delete
     public Key deleteMax() {
         Key max = pq[1];
-        ex(1, N--);
-        sink(1);
+        ex(pq, 1, N--);
         pq[N + 1] = null;
+        sink(1);
         return max;
     }
 
-    //小元素下沉
     private void sink(int k) {
-        int s = k * 2;
-        while (s <= N) {
-            if (s < N && less(s, s + 1)) {
-                s = s + 1;
+        while (k * 2 <= N) {
+            int s = 2 * k;
+            if (s < N && less(pq, s, s + 1)) {
+                s++;
             }
-            //TODO
-            if (!less(k, s)) {
+            if (!less(pq, s, k)) {
                 break;
             }
-            ex(k, s);
+            ex(pq, s, k);
             k = s;
         }
     }
 
     public static void main(String[] args) {
-        MaxPQ<Integer> maxPQ = new MaxPQ<Integer>(10);
-        for (int i = 0; i < 8; i++) {
-            maxPQ.insert(new Integer(i));
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        String[] ss = s.split(" ");
+//        System.out.println(ss.length);
+//        System.out.println(ss.toString());
+//        System.out.println(">>>>>>>>>>>");
+//        for (int i = 0; i < ss.length; i++) {
+//            System.out.print(ss[i] + " ");
+//        }
+//        System.out.println();
+//        System.out.println(">>>>>>>>>>>");
+        MaxPQ maxPQ1 = new MaxPQ<Character>(ss.length + 2);
+        for (int i = 0; i < ss.length; i++) {
+            Character c = ss[i].toCharArray()[0];
+            if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') {
+                maxPQ1.insert(c);
+            } else if (c == '*'){
+                Character maxS = (Character) maxPQ1.deleteMax();
+                System.out.print(maxS + " ");
+            }
         }
+        System.out.println();
     }
 
 }

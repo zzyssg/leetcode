@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f5b1bcf4-5f7f-4036-85bc-b90c89d5cb3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/MaxPQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/MaxPQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/Pq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/Pq.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../software/Java/jdk1.8.0_281/src.zip!/java/util/PriorityQueue.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1odRKBOTmbjEWgUcLVtke7rxBES" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -44,12 +49,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\product\algrathrm\leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Pq">
+  <component name="RunManager" selected="Application.UnorderedListPQ">
     <configuration name="MaxPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.MaxPQ" />
       <module name="leetcode" />
@@ -63,8 +71,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PQSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.PQSort" />
+    <configuration name="OrderedArrayPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.OrderedArrayPQ" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -76,8 +84,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Pq" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.Pq" />
+    <configuration name="OrderedListPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.OrderedListPQ" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -89,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.quicksort.QuickSort" />
+    <configuration name="UnorderedArrayPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.UnorderedArrayPQ" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sort.algarthm.quicksort.*" />
+          <option name="PATTERN" value="com.sort.algarthm.pq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickWithSentinel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.quicksort.QuickWithSentinel" />
+    <configuration name="UnorderedListPQ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sort.algarthm.pq.UnorderedListPQ" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sort.algarthm.quicksort.*" />
+          <option name="PATTERN" value="com.sort.algarthm.pq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Pq" />
-        <item itemvalue="Application.PQSort" />
+        <item itemvalue="Application.UnorderedListPQ" />
+        <item itemvalue="Application.OrderedListPQ" />
+        <item itemvalue="Application.OrderedArrayPQ" />
+        <item itemvalue="Application.UnorderedArrayPQ" />
         <item itemvalue="Application.MaxPQ" />
-        <item itemvalue="Application.QuickWithSentinel" />
-        <item itemvalue="Application.QuickSort" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +158,9 @@
       <workItem from="1613955279569" duration="17297000" />
       <workItem from="1614042204614" duration="3416000" />
       <workItem from="1614331420525" duration="246000" />
-      <workItem from="1614560980076" duration="15642000" />
+      <workItem from="1614560980076" duration="16204000" />
+      <workItem from="1614646546275" duration="14077000" />
+      <workItem from="1614732655624" duration="22651000" />
     </task>
     <servers />
   </component>
@@ -176,6 +186,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/sort/algarthm/MergeOfNature.java</url>
           <line>34</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/MaxPQ.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/UnorderedArrayPQ.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/UnorderedArrayPQ.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sort/algarthm/pq/OrderedListPQ.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
