@@ -18,27 +18,27 @@ public class OrderedListPQ <T extends Comparable>{
     public void insert(T t) {
         Node newNode = new Node();
         newNode.t = t;
+
         Node dummyNode = new Node();
         dummyNode.next = head;
-        Node preNode = dummyNode;
-        //找到相应位置  node1 > node > [node2]
-        while (preNode.next != null && less(newNode, preNode.next)) {
-            preNode = preNode.next;
-        }
-        newNode.next = preNode.next;
-        preNode.next = newNode;
 
-        //TODO
-        // ——以上为head不变的情况下
-        // ——0节点新增节点，或者新增节点为最大时修改head
+        while (dummyNode.next != null && less(newNode, dummyNode.next)) {
+            dummyNode = dummyNode.next;
+        }
+        newNode.next = dummyNode.next;
+        dummyNode.next = newNode;
+
+        //TODO 原本为空 或者 新增节点为最大节点
         if (head == null || head == newNode.next) {
             head = newNode;
         }
+
         N++;
+
     }
 
-    private boolean less(Node next, Node newNode) {
-        return next.t.compareTo(newNode.t) < 0;
+    private boolean less(Node newNode, Node next) {
+        return newNode.t.compareTo(next.t) < 0;
     }
 
     public T deleteMax() {
@@ -46,19 +46,30 @@ public class OrderedListPQ <T extends Comparable>{
         head = head.next;
         N--;
         return max;
+//        Node maxNode = head;
+//        head = head.next;
+//        T max = maxNode.t;
+//        N--;
+//        return max;
+
     }
+
+
 
     public static void main(String[] args) {
         OrderedListPQ pq = new OrderedListPQ();
-//        pq.insert(20);
-        for (int i = 0; i < 10; i++) {
-            Random random = new Random();
-            int num = random.nextInt(19) + 1;
-            pq.insert(num);
-            System.out.print(num + " ");
+        String s = "EASYQUESTION";
+        Character[] cs = new Character[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            cs[i] = s.charAt(i);
+        }
+        System.out.println(cs.length);
+        for (int i = 0; i < cs.length; i++) {
+            System.out.print(cs[i] + " ");
+            pq.insert(cs[i]);
         }
         System.out.println();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < cs.length; i++) {
             System.out.print(pq.deleteMax() + " ");
         }
         System.out.println();
