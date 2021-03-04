@@ -2,17 +2,30 @@ package com.sort.algarthm.pq;
 
 import java.util.Scanner;
 
-public class MaxPQ<Key extends Comparable> {
-    private Key[] pq;
-    private int N;
+/**
+ * 最大堆 -- 实现优先队列
+ * @param <T>
+ */
+public class MaxPQ<T extends Comparable> {
+    private T[] pq;
+    private int N = 0;
 
-    public MaxPQ(int n) {
-        pq = (Key[]) new Comparable[n + 1];
+    public MaxPQ(int maxSize) {
+        pq = (T[]) new Comparable[maxSize + 1];
     }
 
-    //新增数据
-    public void insert(Key key) {
-        pq[++N] = key;
+    public int size() {
+        return N;
+    }
+
+    public boolean isEmpty() {
+        return N == 0;
+    }
+
+    //插入时构造堆
+    public void insert(T t) {
+        pq[++N] = t;
+        //调整堆 pq[N]上升至能胜任的位置
         swim(N);
     }
 
@@ -20,42 +33,49 @@ public class MaxPQ<Key extends Comparable> {
     private void swim(int k) {
         while (k > 1 && less(pq, k / 2, k)) {
             ex(pq, k / 2, k);
-            k = k / 2;
+            k /= 2;
         }
 
     }
 
-    private void ex(Key[] pq, int s, int k) {
-        Key tem = pq[s];
-        pq[s] = pq[k];
+    private void ex(T[] pq, int i, int k) {
+        T tem = pq[i];
+        pq[i] = pq[k];
         pq[k] = tem;
     }
 
-    private boolean less(Key[] pq, int s, int k) {
-        return pq[s].compareTo(pq[k]) < 0;
+    private boolean less(T[] pq, int i, int k) {
+        return pq[i].compareTo(pq[k]) < 0;
     }
 
-    public Key deleteMax() {
-        Key max = pq[1];
+    public T deleteMax() {
+        T max = pq[1];
         ex(pq, 1, N--);
+
+        //TODO 改为最小值
         pq[N + 1] = null;
+        //调整堆 pq[1]下降至盖到的地方
         sink(1);
         return max;
     }
 
+    //下沉
     private void sink(int k) {
+
         while (k * 2 <= N) {
-            int s = 2 * k;
-            if (s < N && less(pq, s, s + 1)) {
-                s++;
+            int j = k * 2;
+            if (j < N && less(pq, j, j + 1)) {
+                j++;
             }
-            if (!less(pq, s, k)) {
+            if (!less(pq, k, j)) {
                 break;
             }
-            ex(pq, s, k);
-            k = s;
+            ex(pq, k, j);
+            k = j;
         }
+
     }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
